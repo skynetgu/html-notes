@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="">
+    <title>Document</title>
+
+    <style>
+
+        body{
+            margin: 0;
+        }
+        #show {
+
+            width: 976px;
+            border: 2px solid green;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Viewport</h1>
+
+    <div id="show">
+        刀枪剑戟，斧钺钩叉。
+    </div>
+    <button id="get">Get</button>
+
+    <script>
+
+        function pop(){
+
+            alert(document.documentElement.clientWidth)
+
+            alert(window.innerWidth)
+
+            alert(window.devicePixelRatio)
+        }
+
+        let button=document.querySelector("#get")
+        button.addEventListener('click',pop)
+
+    </script>
+</body>
+</html>

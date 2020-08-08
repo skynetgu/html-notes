@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <title>HTML表格基础</title>
+
+  <style>
+    table {
+      border-collapse: collapse;
+      text-align: center
+    }
+
+    th,
+    td {
+      border: 2px solid red;
+      width: 6em;
+      height: 4em;
+    }
+
+    .table-demo {
+
+    }
+
+
+    /* table th:first-child,td:nth-child(3){
+      background-color: green;
+      background-origin: border-box;
+    } */
+
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>HTML 表格基础 </h1>
+  </header>
+
+  <main>
+
+    <section class="table-demo">
+      <h2>h1 in main</h2>
+      <div>
+        <!-- elements : table caption colgroup col thead tbody tfooter tr th td 
+          colspan rowspan span 
+
+          scope col row colgroup rowgroup
+
+          id headers
+         -->
+        <table>
+          <caption>用户信息表</caption>
+          <colgroup>
+            <col class="colored">
+            <col span="2">
+            <col class="colored">
+          </colgroup>
+
+          <thead>
+            <tr>
+              <th>name</th>
+              <th>gender</th>
+              <th>birthday</th>
+              <th>address</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>jane</td>
+              <td>july</td>
+              <td>tom</td>
+              <td>smith</td>
+            </tr>
+
+            <tr>
+              <td>male</td>
+              <td>female</td>
+              <td>female</td>
+              <td>male</td>
+            </tr>
+
+            <tr>
+              <td>anhui</td>
+              <td>zhejiang</td>
+              <td>jiangsu</td>
+              <td>shandong</td>
+            </tr>
+          </tbody>
+
+          <tfoot>
+
+            <tr>
+              <td colspan="4"> 合計</td>
+            </tr>
+          </tfoot>
+
+
+        </table>
+
+
+      </div>
+
+
+    </section>
+  </main>
+
+
+</body>
+
+</html>
