@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!-- <meta name="viewport" content="user-scalable=yes"> -->
+    <title>Web Viewport</title>
+
+    <style>
+
+        
+        body{
+            margin: 0;
+            
+            border: 2px solid green;
+        }
+
+        #large {
+            width: 100px;
+            height: 200px;
+            border: 2px solid red;
+        }
+
+        .device-info{
+            margin-left: 20px;
+        }
+    </style>
+
+
+</head>
+<body>
+    <header>
+        <h1>搞懂viewport</h1>
+    </header>
+
+    <div id="large">撑大</div>
+    <main>
+        <section class="device-info">
+
+            <h2>window:</h2>
+            <p>window.innerWidth: <span id="inner-width"></span></p>
+            <p>window.innerHeight: <span id="inner-height"></span></p>
+            <p>window.outerWidth: <span id="outer-width"></span></p>
+            <p>window.outerHeight: <span id="outer-height"></span></p>
+
+            <h2>screen:</h2>
+            <p>screen.availWidth: <span id="avail-width"></span></p>
+            <p>screen.availHeight: <span id="avail-height"></span></p>
+            <p>screen.width: <span id="width"></span></p>
+            <p>screen.height: <span id="height"></span></p>
+
+            <h2>document:</h2>
+            <p>document.documentElement.clientWidth: <span id="element-client-width"></span></p>
+            <p>document.documentElement.clientHeight: <span id="element-client-height"></span></p>
+            <p>document.body.clientWidth: <span id="body-client-width"></span></p>
+            <p>document.body.clientHeight: <span id="body-client-height"></span></p>
+            <button id="decrement-width">减小宽度</button>
+
+        </section>
+    </main>
+
+
+    <script>
+
+        //window
+        let innerWidth=document.querySelector('#inner-width')
+        let innerHeight=document.querySelector('#inner-height')
+        let outerWidth=document.querySelector('#outer-width')
+        let outerHeight=document.querySelector('#outer-height')
+
+        innerWidth.textContent = window.innerWidth + 'px';
+        innerHeight.textContent = window.innerHeight + 'px';
+        outerWidth.textContent = window.outerWidth + 'px';
+        outerHeight.textContent = window.outerHeight + 'px';
+
+        // screen
+        const screenAvailWidth = document.querySelector('#avail-width');
+        const screenAvailHeight = document.querySelector('#avail-height');
+        const screenWidth = document.querySelector('#width');
+        const screenHeight = document.querySelector('#height');
+
+        screenAvailWidth.textContent = screen.availWidth + 'px';
+        screenAvailHeight.textContent = screen.availHeight + 'px';
+        screenWidth.textContent = screen.width + 'px';
+        screenHeight.textContent = screen.height + 'px';
+
+        //document
+        const elementWidth = document.querySelector('#element-client-width');
+        const elementHeight = document.querySelector('#element-client-height');
+        const bodyWidth = document.querySelector('#body-client-width');
+        const bodyHeight = document.querySelector('#body-client-height');
+
+        elementWidth.textContent = document.documentElement.clientWidth + 'px';
+        elementHeight.textContent = document.documentElement.clientHeight + 'px';
+        bodyWidth.textContent = document.body.clientWidth + 'px';
+        bodyHeight.textContent = document.body.clientHeight+'px'
+
+    </script>
+
+    
+</body>
+</html>
